@@ -5,21 +5,21 @@
 class Releaseguard < Formula
   desc "Artifact policy engine — scan, harden, sign, and verify release artifacts before they ship."
   homepage "https://github.com/Helixar-AI/ReleaseGuard"
-  version "0.1.4"
+  version "0.1.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Helixar-AI/ReleaseGuard/releases/download/v0.1.4/releaseguard-0.1.4-darwin-amd64.tar.gz"
-      sha256 "c976558690e07d393ccf8f2e2d087c805ba2dd7e1ddb5a0da7b9d79d7d197f21"
+      url "https://github.com/Helixar-AI/ReleaseGuard/releases/download/v0.1.5/releaseguard-0.1.5-darwin-amd64.tar.gz"
+      sha256 "2e0e1c4e2ebdb227a3c4b3381995a9aae8dc41b89ad05f40324ad8f8d2a20844"
 
       define_method(:install) do
         bin.install "releaseguard"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Helixar-AI/ReleaseGuard/releases/download/v0.1.4/releaseguard-0.1.4-darwin-arm64.tar.gz"
-      sha256 "23361a19ab9dcb0cad63f1906371efc6088b386cfb9f0d8b31ce303c9d027d7a"
+      url "https://github.com/Helixar-AI/ReleaseGuard/releases/download/v0.1.5/releaseguard-0.1.5-darwin-arm64.tar.gz"
+      sha256 "54267d7fc92ba8e548993ae9ea53500c1e7729d96009a4f4e3aa4f5f0722270d"
 
       define_method(:install) do
         bin.install "releaseguard"
@@ -29,15 +29,15 @@ class Releaseguard < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Helixar-AI/ReleaseGuard/releases/download/v0.1.4/releaseguard-0.1.4-linux-amd64.tar.gz"
-      sha256 "7c9171f9d065d5af59a9a790bcb719795d2f406548e29f2c5c8125a94d90c5af"
+      url "https://github.com/Helixar-AI/ReleaseGuard/releases/download/v0.1.5/releaseguard-0.1.5-linux-amd64.tar.gz"
+      sha256 "230ab76c41dac3fd29a2e713cc54c4af5297ab6a00dc3f3d8a273157e02ca2e3"
       define_method(:install) do
         bin.install "releaseguard"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Helixar-AI/ReleaseGuard/releases/download/v0.1.4/releaseguard-0.1.4-linux-arm64.tar.gz"
-      sha256 "5019f1e3b986289b776882dcfd1a6a1bd684f553f88081257eb4a04ff41090c2"
+      url "https://github.com/Helixar-AI/ReleaseGuard/releases/download/v0.1.5/releaseguard-0.1.5-linux-arm64.tar.gz"
+      sha256 "a4d9e943515b3523dfb4abf02e42d35dfb5b9d4e9950e4b57e943db08bffb17f"
       define_method(:install) do
         bin.install "releaseguard"
       end
